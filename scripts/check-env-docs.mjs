@@ -115,6 +115,12 @@ const ALLOWLIST = {
   'RESOLVER_POLL_INTERVAL_MS': 'Resolver internal config',
   'RELAYER_PRIVATE_KEY': 'Relayer secret key (superseded by coordinator)',
   'RELAYER_STELLAR_SECRET': 'Relayer stellar secret (superseded by coordinator)',
+  'APP_PRIVATE_KEY': 'Redaction test fixture, not real runtime config',
+  'SERVICE_BEARER_TOKEN': 'Redaction test fixture, not real runtime config',
+  'HTLC_PREIMAGE': 'Redaction test fixture, not real runtime config',
+  'PREIMAGE': 'E2E test script only',
+  'RESOLVER_REGISTRY_ADDRESS': 'Contract deployment param, not runtime config',
+  'V2_DRY_RUN': 'Contract deployment param, not runtime config',
 };
 
 function walkDir(dirPath) {

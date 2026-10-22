@@ -38,6 +38,8 @@ jobs:
 
       - name: Validate deployment JSON
         run: pnpm validate:deployments
+      - name: Check environment variable documentation
+        run: pnpm check:env-docs
 
       - name: Build SDK
         run: pnpm --filter @oversync/sdk build
