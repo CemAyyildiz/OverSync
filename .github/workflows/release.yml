@@ -27,6 +27,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify release tag matches package.json version
+        run: node scripts/check-release-tag-version.mjs "${{ github.ref }}"
 
       - name: Extract metadata
         id: meta

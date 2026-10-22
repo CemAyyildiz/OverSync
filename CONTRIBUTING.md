@@ -100,6 +100,15 @@ The checklist is the artefact reviewers will cite when assessing the change.
 Filling it in once is cheaper than answering the same questions in review
 comments.
 
+## Releasing
+
+Pushing a `v*` tag (e.g. `v1.0.0`) triggers `.github/workflows/release.yml`,
+which builds and publishes the resolver Docker image to GHCR. Before that
+build runs, the workflow checks the tag against the root `package.json`
+`version` with `node scripts/check-release-tag-version.mjs`, and fails with
+a clear message if they don't match. Bump `package.json`'s `version` and
+push a matching `vX.Y.Z` tag together.
+
 ## Security
 
 Report security-sensitive issues privately using [`docs/SECURITY.md`](docs/SECURITY.md).
