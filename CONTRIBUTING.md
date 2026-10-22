@@ -68,6 +68,11 @@ cargo test --release
 For Solidity contract changes, the contracts workflow also runs Slither on
 `contracts/contracts/v2`.
 
+Slither is installed with pinned, hash-verified dependencies from
+`.github/pip/slither-requirements.txt` (regenerate with `pip-compile
+--generate-hashes` under Python 3.11 after bumping the version in
+`.github/pip/slither.in`).
+
 ## Pull request expectations
 
 - Write PR descriptions and code comments in English.
